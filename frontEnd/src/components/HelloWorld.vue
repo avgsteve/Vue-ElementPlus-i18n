@@ -1,4 +1,5 @@
 <template>
+  <img alt="Vue logo" class="element-plus-logo" src="../assets/logo.png" />
   <h1>{{ msg }}</h1>
 
   <el-button icon="el-icon-success" type="primary" 
@@ -41,5 +42,8 @@
 <style scoped>
 a {
   color: #42b983;
+}
+.element-plus-logo {
+  width: 50%
 }
 </style>
