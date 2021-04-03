@@ -3,8 +3,23 @@
   <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
 </template>
 
-<script setup>
+<script>
 import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  components: {
+    HelloWorld 
+  },
+  computed: {
+
+  },
+  created() {
+
+  },
+  watch: {
+  }
+}
+
 </script>
 
 <style>

@@ -1,15 +1,16 @@
 {
   "name": "vue-elementplus-i18n",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.5",
     "element-plus": "latest",
-
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.0.4",
