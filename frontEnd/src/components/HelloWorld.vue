@@ -1,7 +1,8 @@
 <template>
   <h1>{{ msg }}</h1>
 
-  <el-button icon="el-icon-success" type="primary" @click="count++">count is: {{ count }}</el-button>
+  <el-button icon="el-icon-success" type="primary" 
+  @click="inCrement"> count is: {{ count }} </el-button>
 
   <p>
     Edit
@@ -10,18 +11,32 @@
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      count: 0
+  import { defineComponent,computed } from 'vue';
+  import { useStore } from 'vuex'
+  import { key } from '../../store'
+
+  export default defineComponent({
+    name: 'HelloWorld',
+    props: {
+      msg: {
+        type: String,
+        default: ''
+      }
+    },
+    setup() {
+      const store = useStore(key)
+      const count = computed(() => store.state.count)
+
+      return {
+        count,
+        inCrement: () => store.commit('increment')
+      }
     }
-  }
-}
+  })
 </script>
+
+
+
 
 <style scoped>
 a {

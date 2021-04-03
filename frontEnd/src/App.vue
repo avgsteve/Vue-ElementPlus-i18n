@@ -3,10 +3,12 @@
   <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
 </template>
 
-<script>
+<script lang="ts"> 
 import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
+  name: 'App',
   components: {
     HelloWorld 
   },
@@ -18,7 +20,7 @@ export default {
   },
   watch: {
   }
-}
+})
 
 </script>
 
