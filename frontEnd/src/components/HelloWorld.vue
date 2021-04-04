@@ -3,6 +3,8 @@
     <img alt="Vue logo" class="element-plus-logo" src="../assets/logo.png" />
     <h1>{{ msg }}</h1>
 
+    <h3>Locale: {{$t('message.hello')}} </h3>
+
     <el-button icon="el-icon-success" type="primary" @click="inCrement">
       count is: {{ count }}
     </el-button>
@@ -31,9 +33,11 @@
       const store = useStore(key)
       const count = computed(() => store.state.count)
 
+
       return {
         count,
-        inCrement: () => store.commit('increment')
+        inCrement: () => store.commit('increment'),
+
       }
     }
   })

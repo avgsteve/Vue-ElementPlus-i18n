@@ -2,6 +2,10 @@
 
 {
   "compilerOptions": {
+
+    // for vuei18n: https://stackoverflow.com/questions/54476994/how-do-you-import-a-json-file-with-vuejs-typescript
+    "resolveJsonModule": true,
+
     // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
     "allowSyntheticDefaultImports": true,
     
@@ -60,7 +64,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/i18n.js"  ],
   "exclude": [
     "node_modules"
   ]
