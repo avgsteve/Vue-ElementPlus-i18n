@@ -1,9 +1,11 @@
 <template>
-  <img class='element-plus-logo'
-    alt="Vue logo"
-    src="../assets/logo.png"
-  />
-  <h1>{{ msg }}</h1>
+    <div>
+        <img class='element-plus-logo'
+          alt="Vue logo"
+          src="../assets/logo.png"
+        />
+        <h1>{{ msg }}</h1>
+    </div>
 </template>
 
 <script lang="ts">

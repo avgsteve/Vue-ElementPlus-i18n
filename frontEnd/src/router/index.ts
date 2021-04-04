@@ -8,7 +8,7 @@ const basicRoutes: Array<RouteRecordRaw> = [
     path: "/",
     name: "HelloWorld",
     component: HelloWorld,
-    props: true,
+    props: true,    
   },
   {
     path: "/about",

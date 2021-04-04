@@ -1,18 +1,21 @@
 <template>
-  <img alt="Vue logo" class="element-plus-logo" src="../assets/logo.png" />
-  <h1>{{ msg }}</h1>
+  <div>
+    <img alt="Vue logo" class="element-plus-logo" src="../assets/logo.png" />
+    <h1>{{ msg }}</h1>
 
-  <el-button icon="el-icon-success" type="primary" 
-  @click="inCrement"> count is: {{ count }} </el-button>
+    <el-button icon="el-icon-success" type="primary" @click="inCrement">
+      count is: {{ count }}
+    </el-button>
 
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+    <p>
+      Edit
+      <code>components/HelloWorld.vue</code> to test hot module replacement.
+    </p>
+  </div>
 </template>
 
 <script>
-  import { defineComponent,computed } from 'vue';
+  import { defineComponent, computed } from 'vue'
   import { useStore } from 'vuex'
   import { key } from '../../store'
 
@@ -36,14 +39,11 @@
   })
 </script>
 
-
-
-
 <style scoped>
-a {
-  color: #42b983;
-}
-.element-plus-logo {
-  width: 50%
-}
+  a {
+    color: #42b983;
+  }
+  .element-plus-logo {
+    width: 50%;
+  }
 </style>

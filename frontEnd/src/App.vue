@@ -1,19 +1,20 @@
 <template>
-  <router-link :to="{ name: `HelloWorld`, params: { msg: `Hello Vue 3.0 + Element Plus + Vite` } }">
+  <router-link :to="{ name: `HelloWorld`, params: { msg: `Vue Project Template` } }">
     <el-button class="btn">
       Home
     </el-button>
   </router-link>
 
   <router-link to="/about">
-    <el-button  class="btn"> About </el-button>
+    <el-button class="btn"> About </el-button>
   </router-link>
 
-  <div>
-    <router-view>
-    </router-view>
-  </div>
+      <router-view v-slot="slotProps"> 
+          <transition name="route_animation" mode="out-in">
+          <component :is="slotProps.Component"></component>
+      </transition>
 
+    </router-view>
 </template>
 
 <script lang="ts">
@@ -26,7 +27,11 @@
       HelloWorld
     },
     computed: {},
-    created() {},
+    created() {
+      // 讓頁面進入 root path 以觸發 <router-view>裡面的 animation
+      console.log( 'entering root path' );
+      this.$router.replace('/')
+    },
     watch: {}
   })
 </script>
@@ -64,26 +69,26 @@
     margin: 0 1rem 0;
   }
 
-  .route-enter-from {
+  .route_animation-enter-from {
     opacity: 0;
     transform: translateY(-30px);
   }
 
-  .route-leave-to {
+  .route_animation-leave-to {
     opacity: 0;
     transform: translateY(30px);
   }
 
-  .route-enter-active {
+  .route_animation-enter-active {
     transition: all 0.3s ease-out;
   }
 
-  .route-leave-active {
+  .route_animation-leave-active {
     transition: all 0.3s ease-in;
   }
 
-  .route-enter-to,
-  .route-leave-from {
+  .route_animation-enter-to,
+  .route_animation-leave-from {
     opacity: 1;
     transform: translateY(0);
   }
