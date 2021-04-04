@@ -15,7 +15,7 @@ import 'element-plus/lib/theme-chalk/index.css'
 import App from './App.vue';
 import './index.css';
 
-
+// Vue3 + i18n 設定
 const i18n = createI18n({
   // https://github.com/intlify/vue-i18n-loader
   // legacy: false,

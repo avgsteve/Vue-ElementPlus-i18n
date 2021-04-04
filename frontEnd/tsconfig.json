@@ -2,7 +2,8 @@
 
 {
   "compilerOptions": {
-
+    
+    // Vue3 + i18n
     // for vuei18n: https://stackoverflow.com/questions/54476994/how-do-you-import-a-json-file-with-vuejs-typescript
     "resolveJsonModule": true,
 

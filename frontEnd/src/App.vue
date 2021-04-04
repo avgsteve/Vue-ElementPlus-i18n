@@ -9,8 +9,9 @@
     <el-button class="btn"> About </el-button>
   </router-link>
 
+  <!-- 切換語系的選單 Language Menu -->
   <el-select  v-model="localOptionValue" clearable placeholder="Languages">
-    <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+    <el-option v-for="item in languagesOptionsMenu" :key="item.value" :label="item.label" :value="item.value">
     </el-option>
   </el-select>
 
@@ -24,7 +25,6 @@
 <script lang="ts">
   import HelloWorld from './components/HelloWorld.vue'
   import { defineComponent } from 'vue'
-  import { useI18n } from 'vue-i18n';
 
   export default defineComponent({
     name: 'App',
@@ -32,18 +32,13 @@
       HelloWorld
     },
     setup() {
-    const { t, locale, messages } = useI18n({
-      useScope: 'global',
-      locale: 'en'
-    })
-    console.log('global locale messages', messages.value)
-    return { t, locale }
     },
-    data(): { options: Object[]; localOptionValue: string } {
+    data(): { languagesOptionsMenu: Object[]; localOptionValue: string } {
       return {
-        options: [{
+        // 顯示語言選單的Array 
+        languagesOptionsMenu: [{
           value: 'zhTW',
-          label: '中文'
+          label: '繁體中文'
         }, {
           value: 'en',
           label: 'English'
@@ -56,12 +51,13 @@
         return 
       }
     },
-    created() {
-      // 讓頁面進入 root path 以觸發 <router-view>裡面的 animation
+    created(): void {
+      // 讓頁面進入 root path 以觸發 <router-view>裡面的 animation，並且傳入 msg 這個 param 和值
       console.log('entering root path')
-      this.$router.replace('/')
+      this.$router.replace({ name: "HelloWorld", params: { msg: `Vue Project Template` }} )
     },
     watch: {
+        // 透過監看 localOptionValue 值的變化，讓語系的設定可以自動動態修改
         localOptionValue: function (newVal, oldVal) {
         // console.log( {newVal, oldVal} );
         this.$store.dispatch('changeLocalAction',newVal);

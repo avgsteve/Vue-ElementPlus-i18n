@@ -2,8 +2,8 @@
   <div>
     <img alt="Vue logo" class="element-plus-logo" src="../assets/logo.png" />
     <h1>{{ msg }}</h1>
-
-    <h3>Locale: {{$t('message.hello')}} </h3>
+    <!-- 透過 i18n 選顯不同語言 -->
+    <h3> {{  $t('message.hello')  }} </h3>
 
     <el-button icon="el-icon-success" type="primary" @click="inCrement">
       count is: {{ count }}
