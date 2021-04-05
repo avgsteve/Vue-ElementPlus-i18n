@@ -1,17 +1,17 @@
 <template>
   <div>
     <img alt="Vue logo" class="element-plus-logo" src="../assets/logo.png" />
-    <h1>{{ msg }}</h1>
     <!-- 透過 i18n 選顯不同語言 -->
-    <h3> {{  $t('message.hello')  }} </h3>
+    <h1>{{ $t('helloWorld.templateProject') }}</h1>
 
     <el-button icon="el-icon-success" type="primary" @click="inCrement">
       count is: {{ count }}
     </el-button>
 
     <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test hot module replacement.
+      {{ $t('helloWorld.edit')}}
+        <code>components/HelloWorld.vue</code> 
+      {{ $t('helloWorld.testHMR')}}
     </p>
   </div>
 </template>

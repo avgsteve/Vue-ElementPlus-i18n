@@ -1,5 +1,20 @@
 {
-  "message": {
-    "hello": "哈嘍世界"
+  "helloWorld": {
+    "templateProject": "Vue 專案範本",
+    "edit": "編輯",
+    "testHMR" : "來測試 HMR 自動更新內容功能"
+  },
+    "navigation":{
+    "buttons":{
+      "home": "首頁",
+      "about": "關於"
+    }
+  },
+    "about":{
+    "thisProjectUses": "這個專案使用",
+    "vueFrameWork":"Vue 前端框架",
+    "elementPlus":"UI & UI 組件框架",
+    "typeScript":"JavaScript資料型別檢查工具",
+    "vuei18n":"Vue的多國語言翻譯外掛"
   }
 }

@@ -1,5 +1,20 @@
 {
-  "message": {
-    "hello": "hello world"
+  "helloWorld": {
+    "templateProject": "Vue Project Template",
+    "edit": "edit",
+    "testHMR" : "to test hot module replacement."
+  },
+    "navigation":{
+    "buttons":{
+      "home": "home",
+      "about": "about"
+    }
+  },
+  "about":{
+    "thisProjectUses": "This project uses",
+    "vueFrameWork":"Vue front-end framework",
+    "elementPlus":"UI & UI component framework",
+    "typeScript":"Data type-checking tool for JavaScript",
+    "vuei18n":"Vue's multi language plugin"
   }
 }

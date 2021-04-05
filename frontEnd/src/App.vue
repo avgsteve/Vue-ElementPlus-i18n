@@ -1,17 +1,24 @@
 <template>
-  <router-link :to="{ name: `HelloWorld`, params: { msg: `Vue Project Template` } }">
+  <!-- Navigation 按鈕  -->
+  <!-- 使用 params 傳入參數"msg"和值到 HelloWorld component-->
+  <router-link :to="{ name: `HelloWorld`, params: { msg: $t('helloWorld.templateProject') } }">
     <el-button class="btn">
-      Home
+      {{  $t('navigation.buttons.home') }}
     </el-button>
   </router-link>
 
   <router-link to="/about">
-    <el-button class="btn"> About </el-button>
+    <el-button class="btn">    {{  $t('navigation.buttons.about') }} </el-button>
   </router-link>
 
   <!-- 切換語系的選單 Language Menu -->
-  <el-select  v-model="localOptionValue" clearable placeholder="Languages">
-    <el-option v-for="item in languagesOptionsMenu" :key="item.value" :label="item.label" :value="item.value">
+  <el-select v-model="localOptionValue" clearable placeholder="Languages">
+    <el-option
+      v-for="item in languagesOptionsMenu"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value"
+    >
     </el-option>
   </el-select>
 
@@ -31,42 +38,45 @@
     components: {
       HelloWorld
     },
-    setup() {
-    },
+    setup() {},
     data(): { languagesOptionsMenu: Object[]; localOptionValue: string } {
       return {
-        // 顯示語言選單的Array 
-        languagesOptionsMenu: [{
-          value: 'zhTW',
-          label: '繁體中文'
-        }, {
-          value: 'en',
-          label: 'English'
-        }],
+        // 顯示語言選單的Array
+        languagesOptionsMenu: [
+          {
+            value: 'zhTW',
+            label: '繁體中文'
+          },
+          {
+            value: 'en',
+            label: 'English'
+          }
+        ],
         localOptionValue: ''
       }
     },
     computed: {
-      helloWorldMessage(){
-        return 
+      helloWorldMessage() {
+        return
       }
     },
     created(): void {
       // 讓頁面進入 root path 以觸發 <router-view>裡面的 animation，並且傳入 msg 這個 param 和值
       console.log('entering root path')
-      this.$router.replace({ name: "HelloWorld", params: { msg: `Vue Project Template` }} )
+      this.$router.replace(
+        { name: 'HelloWorld', params: { msg: this.$t('helloWorld.templateProject') } }
+        )
     },
     watch: {
-        // 透過監看 localOptionValue 值的變化，讓語系的設定可以自動動態修改
-        localOptionValue: function (newVal, oldVal) {
+      // 透過監看 localOptionValue 值的變化，讓語系的設定可以自動動態修改
+      localOptionValue: function(newVal, oldVal) {
         // console.log( {newVal, oldVal} );
-        this.$store.dispatch('changeLocalAction',newVal);
+        this.$store.dispatch('changeLocalAction', newVal)
         // 只要修改了 ↓ locale 就可以動態的修改目前使用 i18n 的 變數
-        this.$root.$i18n.locale = newVal;
+        this.$root.$i18n.locale = newVal
         // console.log( ' this.$root.$i18n.locale: ',  this.$root.$i18n.locale );
-    },
-    },
-    
+      }
+    }
   })
 </script>
 
@@ -99,7 +109,7 @@
     margin: 0;
   }
 
-  .btn{
+  .btn {
     margin: 0 1rem 0 0;
   }
 
