@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp, defineAsyncComponent } from 'vue';
 import { store, key } from '../store'
 import ElementPlus from 'element-plus';
 
