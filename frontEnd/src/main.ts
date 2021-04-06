@@ -17,9 +17,8 @@ import './index.css';
 
 // Vue3 + i18n 設定
 const i18n = createI18n({
-  // https://github.com/intlify/vue-i18n-loader
   // legacy: false,
-  locale: 'en',
+  locale: 'en', 
   messages: {
     en, zhTW
   }
