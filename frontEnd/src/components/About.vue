@@ -2,8 +2,8 @@
   <div>
 
     <!-- 使用 i18n $t('property.value') 顯示不同語系的內容 (內容在 'src/locales/' 裡面的 .json檔案) -->
-    <img class="element-plus-logo" alt="Vue logo" src="../assets/logo.png" />
-    <h1>{{ $t('about.thisProjectUses') }} :</h1>
+
+    <h3>{{ $t('about.thisProjectUses') }} :</h3>
 
     <ul class="project-about-list">
       <!-- 在component的property裡面使用 component data 的變數，並透過watch監看 $store.state.locale 的內容，動態更新變數的內容-->
@@ -16,7 +16,7 @@
           :content="popupTextVue"
         >
           <template #reference>
-            <a href="https://vuejs.org/" target="_blan" rel="noreferrer noopener"> Vue </a>
+            <a href="https://vuejs.org/" target="_blank" rel="noreferrer noopener"> Vue </a>
           </template>
         </el-popover>
       </li>
@@ -29,7 +29,7 @@
           :content="popupTextElementPlus"
         >
           <template #reference>
-            <a href="https://element-plus.org/" target="_blan" rel="noreferrer noopener"
+            <a href="https://element-plus.org/" target="_blank" rel="noreferrer noopener"
               >Element Plus
             </a>
           </template>
@@ -46,7 +46,7 @@
           <template #reference>
             <a
               href="https://www.youtube.com/watch?v=CQAQkHuulTU"
-              target="_blan"
+              target="_blank"
               rel="noreferrer noopener"
               >TypeScript
             </a>
@@ -63,7 +63,7 @@
           :content="popupTextVuei18n"
         >
           <template #reference>
-            <a href="https://kazupon.github.io/vue-i18n/" target="_blan" rel="noreferrer noopener"
+            <a href="https://kazupon.github.io/vue-i18n/" target="_blank" rel="noreferrer noopener"
           >vue i18n
         </a>
           </template>
@@ -108,9 +108,6 @@
 </script>
 
 <style scoped>
-  .element-plus-logo {
-    width: 50%;
-  }
 
   .project-about-list {
     /* background: grey; */
