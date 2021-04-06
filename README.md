@@ -5,7 +5,7 @@
 ##### ##有些小地方需注意，請先看過完整的說明之後再clone檔案
 
 ***
-### 
+### 說明
 這個 front-end 專案的目的是建立 Vue 專案的範本檔案，並利用以下 library & package:
   - 透過 Vite 快速建立開發server & 編譯 + 輸出 Vue 檔案，解決 Vue CLI 建立 dev server 速度緩慢的問題
   - TypeScript 幫助建立型別檢查，減少型別錯誤和透過VS Code + TS 的 intellisense輔助加速開發時間 
@@ -14,6 +14,9 @@
     - (另外再加上Vue 的router transition)
   - 其他 Vue 的相關 lib & plugin: 如  Vuex, Vue Router 
 <br>
+
+### 程式碼 & 說明
+[連結](https://github.com/avgsteve/Vue-ElementPlus-i18n/tree/main/frontEnd)
 
 <br>
 

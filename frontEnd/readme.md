@@ -1,15 +1,19 @@
 
+# 程式碼 & 說明
+
 ## Vite 
 快速建立開發server & 編譯 + 輸出 Vue 檔案，解決 Vue CLI 建立 dev server 速度緩慢的問題
 
-## i18n 建立語系切換功能
-  - [官方說明文件 & template](https://github.com/intlify/vue-i18n-loader) 
+## i18n 建立語系切換功能 (程式碼)
+
   - Vue 進入點檔案 [main.js](https://github.com/avgsteve/Vue-ElementPlus-i18n/blob/1ecca8f513fa64baa5a2bc7875e8f0cf09969aec/frontEnd/src/main.ts#L5)
   - i18n [多國語言翻譯檔案(.json格式)](https://github.com/avgsteve/Vue-ElementPlus-i18n/tree/main/frontEnd/src/locales)
   - [透過 Vuex Store 儲存 & 動態修改當前語系變數](https://github.com/avgsteve/Vue-ElementPlus-i18n/blob/main/frontEnd/store/index.ts)
   - [在App.vue之中透過頁面選單切換語系](https://github.com/avgsteve/Vue-ElementPlus-i18n/blob/1ecca8f513fa64baa5a2bc7875e8f0cf09969aec/frontEnd/src/App.vue#L14)
   - [在App.vue之中透過監看 localOptionValue 值的變化](https://github.com/avgsteve/Vue-ElementPlus-i18n/blob/bff416e0f3a3ab4e988c28e820d8eeaec62cecf8/frontEnd/src/App.vue#L73)，讓語系的設定可以自動動態修改，並同時修改 i18n 的 locale & 連動修改UI的語言
 
+
+  - [官方說明文件 & template](https://github.com/intlify/vue-i18n-loader) 
 ## Element Plus 建立 UI 版面和組件 
 
 
