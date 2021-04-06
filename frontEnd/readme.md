@@ -2,7 +2,7 @@
 # 程式碼 & 說明
 
 ## Vite 
-快速建立開發server & 編譯 + 輸出 Vue 檔案，解決 Vue CLI 建立 dev server 速度緩慢的問題
+快速建立開發server & 編譯 + 輸出 Vue 檔案，解決 Vue CLI 建立 dev server 速度緩慢的問題 
 
 ## i18n 建立語系切換功能 (程式碼)
 
@@ -15,9 +15,11 @@
 
   - [官方說明文件 & template](https://github.com/intlify/vue-i18n-loader) 
 ## Element Plus 建立 UI 版面和組件 
+  - 在[Vue.app](https://github.com/avgsteve/Vue-ElementPlus-i18n/blob/main/frontEnd/src/main.ts)中 引入 plugin & plugin injection & 設定
 
+  - 參考文件: 採用[fully import](https://element-plus.org/#/en-US/component/quickstart#import-element-plus)
+    - 採用fully import的原因是如果只用幾個部分組件的話不必要使用framework，自己寫也可以，但是為了開發速度&一致性，所以整體UI都使用Element Plus的設定跟風格，就乾脆全部引入，也減少為了partial import的時候還要另外安裝package/plugin的麻煩和因為 & 以及減少增加package而出錯的機率
 
-##
 
 
 ## 已知問題:
