@@ -63,7 +63,7 @@
           :content="popupTextVuei18n"
         >
           <template #reference>
-           <a href="https://kazupon.github.io/vue-i18n/" target="_blan" rel="noreferrer noopener"
+            <a href="https://kazupon.github.io/vue-i18n/" target="_blan" rel="noreferrer noopener"
           >vue i18n
         </a>
           </template>
