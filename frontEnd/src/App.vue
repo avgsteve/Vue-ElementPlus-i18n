@@ -1,32 +1,34 @@
 <template>
-  <!-- Navigation 按鈕  -->
-  <!-- 使用 params 傳入參數"msg"和值到 HelloWorld component-->
-  <router-link :to="{ name: `HelloWorld`, params: { msg: $t('helloWorld.templateProject') } }">
-    <el-button class="btn">
-      {{  $t('navigation.buttons.home') }}
-    </el-button>
-  </router-link>
+  <div>
+    <!-- Navigation 按鈕  -->
+    <!-- 使用 params 傳入參數"msg"和值到 HelloWorld component-->
+    <router-link :to="{ name: `HelloWorld`, params: { msg: $t('helloWorld.templateProject') } }">
+      <el-button class="btn">
+        {{ $t('navigation.buttons.home') }}
+      </el-button>
+    </router-link>
 
-  <router-link to="/about">
-    <el-button class="btn">    {{  $t('navigation.buttons.about') }} </el-button>
-  </router-link>
+    <router-link to="/about">
+      <el-button class="btn"> {{ $t('navigation.buttons.about') }} </el-button>
+    </router-link>
 
-  <!-- 切換語系的選單 Language Menu -->
-  <el-select v-model="localOptionValue" clearable placeholder="Languages">
-    <el-option
-      v-for="item in languagesOptionsMenu"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value"
-    >
-    </el-option>
-  </el-select>
+    <!-- 切換語系的選單 Language Menu -->
+    <el-select v-model="localOptionValue" clearable placeholder="Languages">
+      <el-option
+        v-for="item in languagesOptionsMenu"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value"
+      >
+      </el-option>
+    </el-select>
 
-  <router-view v-slot="slotProps">
-    <transition name="route_animation" mode="out-in">
-      <component :is="slotProps.Component"></component>
-    </transition>
-  </router-view>
+    <router-view v-slot="slotProps">
+      <transition name="route_animation" mode="out-in">
+        <component :is="slotProps.Component"></component>
+      </transition>
+    </router-view>
+  </div>
 </template>
 
 <script lang="ts">
@@ -63,12 +65,14 @@
     created(): void {
       // 讓頁面進入 root path 以觸發 <router-view>裡面的 animation，並且傳入 msg 這個 param 和值
       console.log('entering root path')
-      this.$router.replace(
-        { name: 'HelloWorld', params: { msg: this.$t('helloWorld.templateProject') } }
-        )
+      this.$router.replace({
+        name: 'HelloWorld',
+        params: { msg: this.$t('helloWorld.templateProject') }
+      })
     },
     watch: {
       // 透過監看 localOptionValue 值的變化，讓語系的設定可以自動動態修改
+      // 並同時修改 i18n 的 locale ，連動修改UI的語言
       localOptionValue: function(newVal, oldVal) {
         // console.log( {newVal, oldVal} );
         this.$store.dispatch('changeLocalAction', newVal)
