@@ -12,7 +12,7 @@
   },
   "about":{
     "thisProjectUses": "This project uses",
-    "vueFrameWork":"Vue front-end framework",
+    "vueFrameWork":"Vue front-end framework, Vue Router and Vuex Store",
     "elementPlus":"UI & UI component framework",
     "typeScript":"Data type-checking tool for JavaScript",
     "vuei18n":"Vue's multi language plugin"

@@ -12,7 +12,7 @@
   },
     "about":{
     "thisProjectUses": "這個專案使用",
-    "vueFrameWork":"Vue 前端框架",
+    "vueFrameWork":"Vue 前端框架, Vue Router 和 Vuex Store",
     "elementPlus":"UI & UI 組件框架",
     "typeScript":"JavaScript資料型別檢查工具",
     "vuei18n":"Vue的多國語言翻譯外掛"

@@ -9,10 +9,11 @@
       <!-- 在component的property裡面使用 component data 的變數，並透過watch監看 $store.state.locale 的內容，動態更新變數的內容-->
       <li>
         <el-popover
-          placement="top-start"
+          placement="left-start"
           title="Vue"
           :width="200"
           trigger="hover"
+          hide-after=100
           :content="popupTextVue"
         >
           <template #reference>
@@ -23,9 +24,10 @@
 
       <li>
         <el-popover
-          placement="top-start"
+          placement="right-start"
           :width="200"
           trigger="hover"
+          hide-after=100
           :content="popupTextElementPlus"
         >
           <template #reference>
@@ -38,7 +40,7 @@
 
       <li>
         <el-popover
-          placement="top-start"
+          placement="left-start"
           :width="200"
           trigger="hover"
           :content="popupTextTypeScript"
@@ -57,7 +59,7 @@
 
       <li>
         <el-popover
-          placement="top-start"
+          placement="right-start"
           :width="200"
           trigger="hover"
           :content="popupTextVuei18n"
@@ -118,7 +120,7 @@
   .project-about-list li {
     width: fit-content;
     list-style: none;
-    margin: 0.6rem auto;
+    margin: 1.1rem auto;
     text-align: center;
     height: 1.3rem;
     font-weight: 800;
@@ -135,7 +137,8 @@
   }
 
   .project-about-list > li > a:hover {
-    color: #000;
+    color: rgb(236, 221, 0);
+    background-color: grey ;
   }
 
   .project-about-list > li > a::before {
