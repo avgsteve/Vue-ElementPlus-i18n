@@ -31,7 +31,32 @@
   ```
   因為目前作法將本地端 compile + 測試之後，輸出到dist資料夾的網頁檔案上傳到git，然後在遠端主機git pull 更新即可
 
-  ### Ubuntu安全性: 關閉 root user 登入 & 使用 SSH 登入
+  ### Ubuntu 帳號安全: 使用 SSH 登入 & 關閉 root user 登入
+  - SSH login
+    1. [使用 Bash 產生 SSH key](https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/create-with-openssh/)
+    2. [將SSH加入 DigitalOcean](https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/to-account/)
+  - disable root user login:
+    1. 注意! 要先建立另外的 [super user(sudoers)](https://www.opencli.com/linux/ubuntu-create-sudo-account) & 賦予權限後再進行這個操作
+    2. root 登入後執行
+        ```
+        sudo nano /etc/ssh/sshd_config
+        ```
+    3. 找到圖例中的設定
+    ![ubuntu sshd_config](https://github.com/avgsteve/Vue-ElementPlus-i18n/blob/main/screenCapture/disable%20ubuntu%20root.png?raw=true)
+    改為以下:
+        ```
+        PermitRootLogin no
+        PasswordAuthentication yes
+        ```
+        如果只想要用 SSH 登入，禁止使用就 
+        ```
+        PasswordAuthentication no
+        ```
+        但是要注意 sudoer 帳號也要先建立SSH登入，不然一使用就等於把自己鎖在門外，無法使用密碼登入主機，只能用DigitalOcean的web console登入
+    4. 最後執行下面指令，重啟 ssh 設定服務 
+        ```
+        sudo service ssh restart
+        ```    
 
 <br>
 
