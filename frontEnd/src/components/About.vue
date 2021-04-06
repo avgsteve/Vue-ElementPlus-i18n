@@ -99,8 +99,8 @@
         console.log({ value, oldValue })
         this.popupTextVue = this.$t('about.vueFrameWork')
         this.popupTextElementPlus = this.$t('about.elementPlus')
-        this.popupTextElementPlus = this.$t('about.typeScript')
-        this.popupTextElementPlus = this.$t('about.vuei18n')
+        this.popupTextTypeScript = this.$t('about.typeScript')
+        this.popupTextVuei18n = this.$t('about.vuei18n')
       }
     },
     setup() {}
