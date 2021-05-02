@@ -2,7 +2,7 @@
 
 with multi language support, prebuilt UI component & type checking dev envelopment
 
-### Demo page: [[143.198.198.203](https://vue-i18n-template.herokuapp.com/)](https://vue-i18n-template.herokuapp.com/)
+### Demo page: [https://vue-i18n-template.herokuapp.com/)](https://vue-i18n-template.herokuapp.com/](https://vue-i18n-template.herokuapp.com/)](https://vue-i18n-template.herokuapp.com/)
 
 (因為是用免費的專案方案，每五分鐘沒有讀取之後會進入休眠所以一開始讀取會有點慢，大概要等 10~15 秒)
 
